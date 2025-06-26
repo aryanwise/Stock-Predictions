@@ -228,6 +228,54 @@ Neutral (Hold):
 7. ATR
 [https://www.youtube.com/watch?v=gtk8k8G-_3k]
 
+
+Stochastic Oscillator:
+    %K (fast line) and %D (slow line)
+    Automatic signal generation:
+        Bullish when %K crosses above %D below 20
+        Bearish when %K crosses below %D above 80
+Enhanced RSI:
+    Added explicit signal column:
+        Overbought (>70)
+        Oversold (<30)
+        Neutral (30-70)
+Bollinger Bands:
+    Added band width calculation
+Signal detection:
+    Price at lower band → Bullish bounce potential
+    Price at upper band → Bearish pullback potential
+
+Average True Range (ATR):
+    Pure volatility measure
+    Useful for setting stop-loss levels (typically 2xATR)
+
+-> Technical Indicator Flow
+Key Dashboard Components & Connections
+Stock Selection Dropdown
+    Pulls from your stock_data dictionary
+    Updates all visualizations dynamically
+
+Main Price Chart (4 Panels)
+    Panel 1: Candlestick + Moving Averages + Bollinger Bands + Trading Signals
+    Panel 2: MACD with histogram
+    Panel 3: RSI with overbought/oversold lines
+    Panel 4: Volume bars
+
+Signal Summary Cards
+    Shows real-time status of composite signal
+    Displays current RSI value
+    Shows calculated stop-loss level
+
+Indicator Details Expandable Section
+    Explains why the current signal was generated
+    Shows individual indicator status
+
+Historical Signals Table
+    Shows recent signals for context
+    Includes key metrics at signal points
+
+
+
 => Basic Pipeline
 1. Data
 - Raw 
@@ -257,3 +305,11 @@ Neutral (Hold):
 for now i know how to deal with technical indicators and i have the sentiment analysis data and will do eda and all those stuff 
 but the main idea is to combine both the technical indicators and sentiment analysis for ai model and show the analysis in a dashboard as top picks 
 but i am confused about the use case of ai in this project
+
+ML Implementations:
+- Currently using RNN/LSTM neural nets for prediction
+- Future scope, shifting to more scalable approach -> xgboost
+
+LSTM Implementation:
+- 2 dim input 
+- training dataset; 3 dim
