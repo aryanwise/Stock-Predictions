@@ -33,7 +33,7 @@ import os
 import io
 
 st.set_page_config(page_title="Stock Analysis Dashboard", layout="wide")
-st.title("📈 Stock Analysis & Prediction Dashboard")
+st.title("📈 Stock Analysis & Recommendation Dashboard")
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 historical_data_dir = os.path.join(base_dir, "..", "Datasets", "Historical Data")
