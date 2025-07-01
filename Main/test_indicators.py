@@ -1,3 +1,15 @@
+"""
+This code provides is a simple test of technical indicators and features for stock data.
+
+1. It imports necessary classes from other modules: TechnicalIndicators, FeatureEngineer, StockDataCleaner, and StockDataCollector.
+
+2. It defines a function quick_check that takes a DataFrame df as input, calculates technical indicators, generates features, and prints the latest signals.
+
+3. It creates a StockDataCollector instance, collects data, cleans it using StockDataCleaner, and stores the cleaned data in `cleaned_data.
+
+4. It extracts the data for a specific stock (AAPL in this case) from cleaned_data and passes it to the quick_check function for verification.
+"""
+
 from technical_indicators import TechnicalIndicators
 from feature_engineering import FeatureEngineer
 from data_cleaning import StockDataCleaner

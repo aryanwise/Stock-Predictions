@@ -2,14 +2,21 @@ import pandas as pd
 
 
 class StockDataCleaner:
+    """
+    StockDataCleaner class
+    Class Methods:
+    1. clean_data(df, sort_descending=True):
+        - cleans and standardizes a single stock data DataFrame by renaming columns, cleaning numeric columns, and converting/sorting dates.
+        - Returns the cleaned DataFrame.
+    2. clean_all(data_collector, sort_descending=True):
+        - Cleans all stock data from a StockDataCollector instance by applying clean_data to each ticker's DataFrame.
+        - Returns a dictionary of cleaned DataFrames, keyed by ticker symbol.
+    """
+
     @staticmethod
     def clean_data(df, sort_descending=True):
         """
         Clean and standardize stock data DataFrame
-        Args:
-            df: Raw stock data DataFrame
-        Returns:
-            Cleaned DataFrame
         """
         df = df.copy()
 
@@ -34,10 +41,6 @@ class StockDataCleaner:
     def clean_all(data_collector, sort_descending=True):
         """
         Clean all data from a StockDataCollector instance
-        Args:
-            data_collector: StockDataCollector instance
-        Returns:
-            Dict of cleaned DataFrames
         """
         cleaned_data = {}
         for ticker, df in data_collector.get_stock_data().items():

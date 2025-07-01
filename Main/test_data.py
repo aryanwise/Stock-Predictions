@@ -1,3 +1,10 @@
+"""
+The code below collects historical stock data using StockDataCollector,
+Cleans the data using StockDataCleaner,
+And then prints the cleaned data for all stocks,
+Specifically for Apple ("AAPL").
+"""
+
 from data_collection import StockDataCollector
 from data_cleaning import StockDataCleaner
 
