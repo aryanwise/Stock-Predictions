@@ -62,6 +62,6 @@ streamlit run dashboard.py
 
 This will open the **Stock Analysis & Recommendation Dashboard** in your default web browser.
 
-```
+
 🚀 **Stay sharp, stay invested — let the data guide your decisions. 📈💡**
-```
+
