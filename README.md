@@ -34,7 +34,7 @@ source project_env/bin/activate
 **On Windows:**
 
 ```bash
-.\project_env\Scripts\activate
+.\project_env\Scripts\Activate.ps1
 ```
 
 ### 4. Install Dependencies
